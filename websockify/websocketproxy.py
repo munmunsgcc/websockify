@@ -297,8 +297,8 @@ class WebSocketProxy(websockifyserver.WebSockifyServer):
             self.rebinder = None
 
             for rdir in rebinder_path:
-                  rpath = os.path.abspath('rebind.so')
 #                 rpath = os.path.join(rdir, "rebind.so")
+                rpath = os.path.abspath('rebind.so')
                 if os.path.exists(rpath):
                     self.rebinder = rpath
                     break
